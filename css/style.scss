@@ -1,8 +1,9 @@
 .blinds-head {
-  background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);;
+  background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);
+  // background-attachment: fixed;
   width: 98vw;
   height: 7vh;
-  position: absolute;
+  position: fixed;;
   z-index: 1;
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
   left: 50%;
