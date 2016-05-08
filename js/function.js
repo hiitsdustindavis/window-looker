@@ -1,19 +1,22 @@
 $(document).ready(function(){
-  var blindHeight = $('.blind').height() - 35;
-  console.log(blindHeight + "sup");
+  // var blindHeight = $(window).height() / 40;
+  // console.log(blindHeight + "sup");
   $('.blind').each(function(i){
     $(this).css({
-    'top' : blindHeight *(i+1) + 'vh',
+    'top' : 5 *(i+1) + 'vh',
     'z-index' : -i
   });
   });
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
-    console.log(hey);
+
     $('.blind').each(function(i){
-      $(this).css({
-        'transform' : 'rotateX(' + wScroll + 'deg)'
-      });
+      if(wScroll < 80){
+        $(this).css({
+          'transform' : 'rotateX(' + wScroll + 'deg)'
+        });
+      }
+      console.log(wScroll);
     });
   });
 });

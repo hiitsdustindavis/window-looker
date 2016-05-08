@@ -10,9 +10,9 @@
 }
 .blinds-parent {
   position: relative;
-  perspective: 500px;
+  // perspective: 500px;
   .blind {
-    transform: rotateX(10deg);
+    // transform: rotateX(10deg);
     background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);;
     width: 96vw;
     height: 5vh;
