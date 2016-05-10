@@ -11,15 +11,17 @@
 .blinds-parent {
   position: fixed;
   perspective: 2000px;
-  left: 50%;
-  margin-left: -48vw; }
+  left: 98%;
+  margin-left: -47vw; }
   .blinds-parent .blind {
     background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);
     width: 96vw;
     height: 5vh;
     border-radius: 5px;
     position: fixed;
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    margin-left: -48vw; }
 
 * {
   margin: 0;
