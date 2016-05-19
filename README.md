@@ -5,18 +5,18 @@
 #### By Dustin Davis
 
 ## Description
-Window of Perception is a conceptual interactive art piece with two goals:
-1) To create an experience where participants can reflect on their values, biases and assumptions.
+Window of Perception is a conceptual interactive art piece with two goals:  
+1) To create an experience where participants can reflect on their values, biases and assumptions.  
 
-2) To expand my skills in HTML, CSS, JavaScript and JQuery. Namely using the JQuery scroll method.
+2) To expand my skills in HTML, CSS, JavaScript and JQuery. Namely using the JQuery scroll method.  
 
 ## Setup/Installation Requirements
 ```
 NOTE: THIS PROJECT IS A WORK IN PROGRESS :)
 ```
 
-1) Clone this repository to a local directory
-2) Open the index.html file in your favorite browser
+1) Clone this repository to a local directory  
+2) Open the index.html file in your favorite browser  
 
 ## Technologies Used
 
