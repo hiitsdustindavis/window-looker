@@ -10,7 +10,7 @@ $(document).ready(function(){
     var wScroll = $(this).scrollTop();
 
     $('.blind').each(function(i){
-      if(wScroll < 187) {
+      if(wScroll < 110) {
         if($(window).height() < 1200){
           $(this).css({
             'transform' : 'rotateX(' + wScroll / 1.2 + 'deg)',
@@ -36,7 +36,7 @@ $(document).ready(function(){
       $('.bottom-bar').css({
         "position" : "relative",
         "top" : (wScroll + $(window).height()) + $('.bottom-bar').height()
-      })
+      });
       // $('.bottom-bar').css({
       //   "bottom" : parseInt($('.bottom-bar').css("bottom")) + 1
       // });
