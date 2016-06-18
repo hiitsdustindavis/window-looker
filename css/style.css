@@ -10,7 +10,6 @@
 
 .blinds-parent {
   position: fixed;
-  perspective: 2000px;
   left: 98%;
   margin-left: -47vw; }
   .blinds-parent .blind {

@@ -10,25 +10,19 @@ $(document).ready(function(){
     var wScroll = $(this).scrollTop();
 
     $('.blind').each(function(i){
-      if(wScroll < 110) {
-        if($(window).height() < 1200){
-          $(this).css({
-            'transform' : 'rotateX(' + wScroll / 1.2 + 'deg)',
-            // 'transform' : 'translateY(' + -5 + 'vh)'
-          });
-        }
+      if(wScroll < 39 && wScroll > 0) {
         if($(window).height() < 780){
           $(this).css({
-            'transform' : 'rotateX(' + wScroll / 1.2 + 'deg)',
-            // 'transform' : 'translateY(' + -5 + 'vh)'
+            'transform' : 'scaleY('+ (1-wScroll/$(this).height()) +')'
           });
-        } else {
+          console.log(1/wScroll);
+        }
+        else {
           $(this).css({
             'transform' : 'rotateX(' + (wScroll / 2) + 'deg)'
-            // 'transform' : 'translateY(' + 5 + 'vh)'
           });
-        } console.log(wScroll / 1.2);
-        // console.log(wScroll);
+        }
+
 
     //Else if below = div with class "bottom-bar" has position "fixed" execute contents.
   } else if($('.bottom-bar').css("position") === "fixed") {
@@ -37,9 +31,6 @@ $(document).ready(function(){
         "position" : "relative",
         "top" : (wScroll + $(window).height()) + $('.bottom-bar').height()
       });
-      // $('.bottom-bar').css({
-      //   "bottom" : parseInt($('.bottom-bar').css("bottom")) + 1
-      // });
     }
 
   });
