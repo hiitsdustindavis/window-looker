@@ -1,3 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+body {
+  background-image: url('../img/Beautiful-White-Cat-Images.jpg');
+  background-attachment: fixed;
+  height: 5000px;
+}
+.frame-top {
+  -webkit-clip-path: polygon(0 0, 100% 0, 92% 100%, 5% 100%);
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%);
+  background: linear-gradient(to bottom, #f6edbb , #95845d);
+  // border: 1px solid blue;
+  height: 8%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+.frame-left {
+  clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%);
+  background: linear-gradient(to right, #f6edbb , #95845d);
+  // border: 1px solid blue;
+  height: 100vh;
+  width: 5vw;
+  position: fixed;
+  top: 0;
+  // border-top: 5vh solid transparent;
+	// border-left: 8vw solid red;
+	// border-bottom: 5vh solid transparent;
+	// height: 90vh;
+	// width: 5vw;
+  // border-style: solid;
+  // border-image:
+  //     linear-gradient(to right, black, rgba(0, 0, 0, 0)) 1 100%;
+  // background-color: white;
+  // margin: 0 auto;
+  // position: fixed;
+}
+.frame-right {
+  clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%);
+  background: linear-gradient(to right, #f6edbb , #95845d);
+  border: 1px solid blue;
+  height: 100vh;
+  width: 5vw;
+  position: fixed;
+  top: 0;
+}
 .blinds-head {
   background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);
   // background-attachment: fixed;
@@ -9,6 +62,7 @@
   left: 50%;
   margin-left: -49vw;
 }
+
 .blinds-parent {
   position: fixed;
   // perspective: 2000px;
@@ -25,19 +79,6 @@
     left: 50%;
     margin-left: -48vw;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-}
-
-body {
-  background-image: url('../img/Beautiful-White-Cat-Images.jpg');
-  background-attachment: fixed;
-  height: 5000px;
 }
 
 .bottom-bar {

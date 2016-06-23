@@ -15,7 +15,7 @@ $(document).ready(function(){
           $(this).css({
             'transform' : 'scaleY('+ (1-wScroll/$(this).height()) +')'
           });
-          console.log(1/wScroll);
+          console.log((1-wScroll/$(this).height()));
         }
         else {
           $(this).css({
@@ -29,8 +29,9 @@ $(document).ready(function(){
     //Change "bottom-bar" div position to "relative" and it's top so that it stays in the same position. We are defining its position from the top of the body. To figure out that distance we add the amount of pixels scrolled (wScroll) to the whole height of the window ($(window).height())) and subtract the height of the bottom bar
       $('.bottom-bar').css({
         "position" : "relative",
-        "top" : (wScroll + $(window).height()) + $('.bottom-bar').height()
+        "top" : (wScroll + $(window).height()) 
       });
+      console.log(wScroll + $(window).height());
     }
 
   });
