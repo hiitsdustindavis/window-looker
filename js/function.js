@@ -1,37 +1,41 @@
 $(document).ready(function(){
-  $('.blind').each(function(i){
+  var $blind = $('.blind');
+  $blind.each(function(i){
     $(this).css({
       'top' : 5 *(i+1) + 'vh',
       'z-index' : -i
     });
   });
-  // var $blindHeight = $('.blind').height();
+
   $(window).scroll(function(){
-    //Generally, what is happening here is on every scroll this whole function is firing. First it checks to see if wScroll < 187. If it is, it will alter the transform:rotate property of the .blind <div>. Otherwise if wScroll is > 187 it will stop altering the transform:rotate property move on to the next elseif branch (explained below).
     var wScroll = $(this).scrollTop();
+    var $blindsParent = $('.blinds-parent');
+    var $bottomBar = $('.bottom-bar');
 
-    $('.blind').each(function(){
-      if(wScroll < ($('.blind').height() - 3) && wScroll > 0) {
-        $(this).css({
-          'transform' : 'scaleY('+ (1-wScroll/$(this).height()) +')'
+    $blind.each(function(){
+      if(wScroll < ($blind.height() - 3) && wScroll > 0) {
+        $blind.css({
+          'transform' : 'scaleY('+ (1-wScroll/$blind.height()) +')'
         });
-        // console.log((1-wScroll/$(this).height()));
 
+      } else if(wScroll > $blind.height()) {
+        $blindsParent.css({
+          "height" : (($(window).height()*0.9) - wScroll)
+        });
 
-      //Else if below = div with class "bottom-bar" has position "fixed" execute contents.
-    } else if(wScroll > $('.blind').height()) {
-      $('.blinds-parent').css({
-        "height" : (($(window).height()*0.9) - wScroll)
-      });
-    } else if($('.bottom-bar').css("position") === "fixed") {
-
-        $('.bottom-bar').css({
+      } else if($bottomBar.offset().top >= $blindsParent.height()) {
+        $bottomBar.css({
           "position" : "relative",
-          "top" : ($('.blinds-parent').height())
+          "top" : ($blindsParent.height())
+        });
+//Else if below is not working. Still sorting out how to make blinds-parent stop reducing in height and bottom-bar stays fixed near top of implied window
+      } else if(wScroll === $(window).height()*0.71979 && $bottomBar.css({"position" : "relative"})) {
+
+        $bottomBar.css({
+          "position" : "fixed",
+          "top" : 560 + 'px'
         });
       }
-      console.log("blind " + $('.blind').height());
-      console.log("parent " + $('.blinds-parent').height());
     });
   });
 });

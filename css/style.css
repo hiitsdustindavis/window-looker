@@ -64,8 +64,7 @@ body {
   position: fixed;
   left: 2%;
   height: 88%;
-  width: 96%;
-  border: 2px solid blue; }
+  width: 96%; }
   .blinds-parent .blind {
     background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);
     width: 100%;
@@ -75,12 +74,12 @@ body {
 
 .bottom-bar {
   background: linear-gradient(to bottom, #95845d, #f6edbb 50%, #c9b57f);
-  width: 96vw;
+  width: 98vw;
   height: 5vh;
   position: fixed;
-  bottom: 12%;
+  top: 88%;
   z-index: 30;
   left: 50%;
-  margin-left: -48vw; }
+  margin-left: -49vw; }
 
 /*# sourceMappingURL=style.css.map */
